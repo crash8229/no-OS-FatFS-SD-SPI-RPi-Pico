@@ -25,6 +25,8 @@ specific language governing permissions and limitations under the License.
 #include "pico/sem.h"
 #include "pico/types.h"
 
+#include "my_debug.h"
+
 #define SPI_FILL_CHAR (0xFF)
 
 // "Class" representing SPIs
@@ -69,10 +71,6 @@ void set_spi_dma_irq_channel(bool useChannel1, bool shared);
 #endif
 
 #ifndef NO_PICO_LED
-#  define USE_LED 1
-#endif
-
-#if USE_LED
 #  define LED_PIN 25
 #  define LED_INIT()                     \
     {                                    \

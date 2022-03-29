@@ -28,6 +28,8 @@ extern "C" {
 }
 #endif
 
+#define NO_PICO_LED
+//#define DEBUG
 
 #if defined(DEBUG) && !defined(NDEBUG)
 #define DBG_PRINTF my_printf
